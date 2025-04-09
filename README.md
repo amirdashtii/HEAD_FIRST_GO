@@ -510,9 +510,10 @@ import (
   "bufio"
   "fmt"
   "log"
+  "math/rand"
   "os"
   "strconv"
-  "stirings"
+  "strings"
   "time"
   )
 
@@ -529,7 +530,7 @@ func main() {
   for guesses := 0 ; guesses < 10 ; guesses++ {
     fmt.Println("You have 10-guesses")
     fmt.Print("Make a guess ? ")
-    input, err := reader.ReadString("\n")
+    input, err := reader.ReadString('\n')
     if err != nil{
       log.Fatal(err)
     }
